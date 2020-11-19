@@ -1,1 +1,0 @@
-package stunning.palm.tree.contest;
