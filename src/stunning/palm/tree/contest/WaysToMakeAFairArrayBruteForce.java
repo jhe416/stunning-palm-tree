@@ -3,6 +3,10 @@ package stunning.palm.tree.contest;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * I tried to build a db linked list and brute force this solution but didn't work..
+ * ugh.
+ */
 public class WaysToMakeAFairArrayBruteForce {
 	public WaysToMakeAFairArrayBruteForce() {}
 	
