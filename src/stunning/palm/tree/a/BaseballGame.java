@@ -3,6 +3,9 @@ package stunning.palm.tree.a;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/*
+ * stack o(n) o(n) solution :)
+ */
 public class BaseballGame {
 	public BaseballGame() {}
 	
