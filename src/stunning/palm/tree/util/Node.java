@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Node {
     public int val;
+    public char cval;
     public Node left;
     public Node right;
     public Node parent;
@@ -36,4 +37,10 @@ public class Node {
         newNode.next = null;  
         return newNode;  
     }  
+    
+    public Node(char val, Node left, Node right) {
+    	          this.val = val;
+    	          this.left = left;
+    	          this.right = right;
+    }
 };
