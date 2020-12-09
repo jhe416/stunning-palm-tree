@@ -95,19 +95,18 @@ class DLinkedList{
         if(size == 0) return null;
         return remove(tail.prev);
     }
-    
-    class Node{
-        int key;
-        int val;
-        int f;
-        Node prev;
-        Node next;
-        
-        public Node(int key, int val, int f){
-            this.key = key;
-            this.val = val;
-            this.f = f;
-        }
-    }
 }
 
+class Node{
+    int key;
+    int val;
+    int f;
+    Node prev;
+    Node next;
+    
+    public Node(int key, int val, int f){
+        this.key = key;
+        this.val = val;
+        this.f = f;
+    }
+}
