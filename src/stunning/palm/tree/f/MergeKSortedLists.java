@@ -2,6 +2,10 @@ package stunning.palm.tree.f;
 
 import stunning.palm.tree.util.ListNode;
 
+/*
+ * divide and conquer time O(nklogk)
+ * but saves space where O(k) k is the length of one list node.
+ */
 public class MergeKSortedLists {
 	public MergeKSortedLists() {}
 	
@@ -48,5 +52,10 @@ public class MergeKSortedLists {
         }
         
         return head.next;
+    }
+    
+    private ListNode merge1(ListNode left, ListNode right) {
+		return right;
+    	
     }
 }

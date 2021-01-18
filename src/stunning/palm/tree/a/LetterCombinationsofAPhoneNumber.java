@@ -22,7 +22,10 @@ public class LetterCombinationsofAPhoneNumber {
         Map<String,List<String>> cache = new HashMap<>();
         cache.put("", new ArrayList<>());
         
-        Map<Character,String> map = new HashMap<Character,String>(){{
+        Map<Character,String> map = new HashMap<Character,String>(){
+			private static final long serialVersionUID = -8927235083525579778L;
+
+		{
             put('2',"abc");
             put('3',"def");
             put('4',"ghi");

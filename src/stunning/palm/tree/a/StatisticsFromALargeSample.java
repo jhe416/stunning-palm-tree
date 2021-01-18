@@ -14,7 +14,7 @@ public class StatisticsFromALargeSample {
 	
 	public double[] sampleStats(int[] count) {
         double min = Double.MAX_VALUE, max = Double.MIN_VALUE, mean = 0, median = 0, mode=Integer.MIN_VALUE, modeVal=0, sum = 0;
-        int totalCount=0, k=0;
+        int totalCount=0;
     
         for(int i=0; i<count.length; i++){
             if(count[i] > 0){
