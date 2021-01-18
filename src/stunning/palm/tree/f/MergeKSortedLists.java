@@ -53,9 +53,4 @@ public class MergeKSortedLists {
         
         return head.next;
     }
-    
-    private ListNode merge1(ListNode left, ListNode right) {
-		return right;
-    	
-    }
 }
