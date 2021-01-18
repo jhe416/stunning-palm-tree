@@ -5,7 +5,7 @@ import java.util.Arrays;
 /*
  * For each column, find the number of consecutive ones ending at each position.
  * For each row, sort the cumulative ones in non-increasing order and "fit" the largest submatrix.
- * Time O(mnlogn)
+ * Time O(mnlogn) => O(mn) + O(m*(nlogn+n)) = o(2mn) + o(mnlogn) = o(mnlogn)
  * space constant
  */
 public class LargestSubmatrixWithRearrangements {
