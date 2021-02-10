@@ -3,7 +3,7 @@ package stunning.palm.tree.a;
 import java.util.Arrays;
 
 /*
- * this question is a dp group question, the logic of dp is finding the previous day partition with 0 tp j
+ * this question is a dp group question, the logic of dp is finding the previous day partition with 0 to j
  * and finding the max after j since the order of the given array matters.
  * Time O(n^2d)
  * space O(n*d)
@@ -32,5 +32,27 @@ public class MinimumDifficultyOfAJobSchedule {
         }
         
         return dp[jobDifficulty.length][d];
+    }
+    
+    public int minDifficultyMySol(int[] jobDifficulty, int d) {
+        if(jobDifficulty.length < d) return -1;
+        int n = jobDifficulty.length;
+        int[][] dp = new int[n][d];
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<=Math.min(i,d-1);j++){
+                int max = jobDifficulty[i];
+                for(int k=i;k>=j;k--){
+                    max = Math.max(max,jobDifficulty[k]);
+                    if(j==0){
+                      dp[i][j] = Math.max(dp[i][j],max);  
+                    }else{
+                      dp[i][j] = dp[i][j] == 0? dp[k-1][j-1] + max : Math.min(dp[i][j], dp[k-1][j-1] + max);
+                    }
+                }
+            }
+        }
+        
+        return dp[n-1][d-1];
     }
 }
