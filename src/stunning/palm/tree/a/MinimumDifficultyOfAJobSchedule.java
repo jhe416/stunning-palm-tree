@@ -24,6 +24,7 @@ public class MinimumDifficultyOfAJobSchedule {
         for(int i=1;i<dp.length;i++){//number of tasks
             for(int j=1;j<=Math.min(d,i);j++){ //this is the day, day needs to be smaller than the tasks in order to partition.
                 int max = jobDifficulty[i-1];
+              //starting from the current task and going back to the last task that can be performed in the same day also all other remaining days can still perform at least 1 task
                 for(int k=i; k>=j;k--){
                     max = Math.max(max,jobDifficulty[k-1]);
                     dp[i][j] = Math.min(dp[i][j], dp[k-1][j-1] + max);
@@ -54,5 +55,37 @@ public class MinimumDifficultyOfAJobSchedule {
         }
         
         return dp[n-1][d-1];
+    }
+    
+    /*
+     * if(d > jobDifficulty.length) return -1; since we already checked this
+     * we just need to start j at i so that we starting at enough tasks to fill enough days save few loops
+     * each day will always have enough to task to
+     * Time O(d*n*d)
+     * Space O(n*d)
+     */
+    public int minDifficultySolThree(int[] jobDifficulty, int d) {
+        if(d > jobDifficulty.length) return -1;
+        int[][] dp = new int[d][jobDifficulty.length];
+        int m = dp.length;
+        int n = dp[0].length;
+        
+
+        for(int i=0;i<m;i++){//days
+            for(int j=i;j<n;j++){//tasks
+                int max = jobDifficulty[j];
+                for(int k=j;k>=i;k--){
+                    max = Math.max(max,jobDifficulty[k]);
+                    if(i == 0){
+                        dp[i][j] = max;
+                    }else{
+                    	//look for the smallest previous day and previous tasks min + the current max
+                        dp[i][j] = dp[i][j] == 0? dp[i-1][k-1] + max : Math.min(dp[i][j], dp[i-1][k-1] + max);
+                    }
+                }                   
+            }
+        }
+        
+        return dp[m-1][n-1];      
     }
 }
