@@ -1,10 +1,6 @@
 package stunning.palm.tree.contest;
 
-<<<<<<< HEAD
-
 //ConcatenationOfArray
-=======
->>>>>>> cd54280f1207ef6abd8c91d6506210304010b28b
 //testing 123
 public class ConcatenationOfArray {
 	public ConcatenationOfArray() {}
