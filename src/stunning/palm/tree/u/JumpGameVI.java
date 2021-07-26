@@ -2,7 +2,7 @@ package stunning.palm.tree.u;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
-
+//JumpGameVI
 public class JumpGameVI {
 	public JumpGameVI() {}
 	
