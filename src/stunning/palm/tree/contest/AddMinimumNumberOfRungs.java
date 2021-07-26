@@ -1,5 +1,6 @@
 package stunning.palm.tree.contest;
 
+//AddMinimumNumberOfRungs
 public class AddMinimumNumberOfRungs {
 	public AddMinimumNumberOfRungs() {}
 	
