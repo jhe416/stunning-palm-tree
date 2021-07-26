@@ -9,6 +9,7 @@ import java.util.PriorityQueue;
  * once k range reaches priority queue flushes out anything outside the range to prepare for the next shift
  * Time O(nlogk)
  * Space constant
+ * 
  */
 public class SlidingWindowMaximum {
 	public SlidingWindowMaximum() {}
