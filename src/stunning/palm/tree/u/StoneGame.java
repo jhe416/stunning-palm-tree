@@ -1,5 +1,5 @@
 package stunning.palm.tree.u;
-
+//StoneGame
 public class StoneGame {
 	public StoneGame() {}
 	
