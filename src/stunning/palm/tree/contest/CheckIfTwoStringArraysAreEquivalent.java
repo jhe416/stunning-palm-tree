@@ -7,6 +7,7 @@ package stunning.palm.tree.contest;
  * return false other wise
  * TIme O(n)
  * Space O(k) k as the longest string in the given arrays.
+ * 
  */
 public class CheckIfTwoStringArraysAreEquivalent {
 	public CheckIfTwoStringArraysAreEquivalent() {}
